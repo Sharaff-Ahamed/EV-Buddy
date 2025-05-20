@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Signup_style.css">
+</head>
+
+<body>
+    <div style="width: 100%;" >
+
+        <nav>
+            <img src="images/Sample-Logo.png" class="logo" alt="Sample Logo" >
+
+            <ul>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="Compare.html">COMPARE</a></li>
+                <li><a href="Map.html">MAP</a></li>
+                <li><a href="Forum.html">FORUM</a></li>
+                <li><a href="About-us.html">ABOUT US</a></li>
+            </ul> 
+            <ul class="signup">
+                <li id="signup-link" style="font-weight: bold;"><a href="Signup.html">SIGNUP</a></li>
+                <li><span id="user-name-display"></span></li>
+                <li><button id="logoutButton" onclick="logout()" style="display:none;">Logout</button></li>
+            </ul>
+
+        </nav>
+
+        <!-- Video loop -->
+        <div class="signup-video">
+            <video autoplay muted loop>
+                <source src="images/sigup-video-2.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="signup-form">
+            <img src="images/Sample-Logo.png" class="signup-logo" alt="Signup Logo" >
+            <h2 style="margin-top: 30px;">Join the Community</h2>
+
+            <button class="signup-button" onclick="openSignupPopup()">Signup</button>
+            <button class="login-button" onclick="openLoginPopup()">Login</button>
+        </div>
+    </div>
+
+    <!-- Signup Popup -->
+    <div id="signupPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeSignupPopup()">&times;</span>
+            <h3>Signup</h3>
+            <form id="signupForm" onsubmit="signupSuccess(event)">
+                <input type="text" id="first-name" name="first-name" placeholder="First Name" required><br>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required><br>
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+                <input type="password" id="retype-password" name="retype-password" placeholder="Retype Password" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLoginPopup()">&times;</span>
+            <h3>Login</h3>
+            <form id="loginForm" onsubmit="loginSuccess(event)">
+                <input type="text" id="login-username" name="login-username" placeholder="Username" required><br>
+                <input type="password" id="login-password" name="login-password" placeholder="Password" required><br>
+                <button type="submit">Log In</button>
+                <a href="#" class="forgot-password" onclick="alert('Redirect to forgot password page')">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/signup.js"></script>
+
+</body> 
+
+</html>

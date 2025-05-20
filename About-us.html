@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="CSS/About_style.css">
+</head>
+<body>
+    <div style="width: 100%;">
+
+        <nav>
+            <img src="images/Sample-Logo.png" alt="Sample Logo" class="logo">
+            <ul>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="Compare.html">COMPARE</a></li>
+                <li><a href="Map.html">MAP</a></li>
+                <li><a href="Forum.html">FORUM</a></li>
+                <li style="font-weight: bold;"><a href="About-us.html">ABOUT US</a></li>
+            </ul>
+            <ul class="signup">
+                <li><a href="Signup.html">SIGNUP</a></li>
+            </ul>
+        </nav>
+
+        <!-- Top layer include pic and about us info -->
+        <div class="top-layer">
+            <div class="about-us">
+                <h1>About Us</h1>
+                <p>
+                    Welcome to EV Buddy, your ultimate destination for everything related to electric vehicles (EVs).
+                    Our platform is designed to simplify the EV experience for enthusiasts, new buyers, and eco-conscious consumers alike.
+                    At EV Buddy, we believe in the power of innovation and community to drive the future of transportation.
+                    Our goal is to provide you with the tools, information, and support you need to make informed decisions and enjoy the benefits of electric mobility.
+                </p>
+            </div>
+            <div class="about-pic">
+                <img src="images/about-us.jpeg" alt="About Us" class="about-pic">
+            </div>
+        </div>
+
+        <!-- Mission Section -->
+        <h2>OUR MISSIONS</h2>
+
+        <div class="buttom-layer">
+            <div class="mission-box">
+                <img src="images/mission-pic-1.jpeg" alt="Mission 1" class="mission-pic">
+                <p>
+                    Our mission is to make charging your electric vehicle as convenient as possible.
+                    With our advanced EV Charging Locator Map, powered by the OpenChargeMap.org API,
+                    you can easily find nearby charging stations, view the types of charging ports available,
+                    and get real-time updates on station availability. We aim to ensure that you never have to worry about finding
+                    a place to charge your EV, no matter where you are.
+                </p>
+            </div>
+            <div class="mission-box">
+                <img src="images/mission-pic-2.jpeg" alt="Mission 2" class="mission-pic">
+                <p>
+                    At EV Buddy, we understand the importance of community and shared knowledge.
+                    Our mission is to create a vibrant, interactive community forum similar to Reddit,
+                    where EV users can connect, share experiences, ask questions, and stay updated on the latest trends and innovations in the EV world.
+                    Whether you're a seasoned EV owner or a curious newcomer, our community is here to support you and foster meaningful discussions.
+                </p>
+            </div>
+            <div class="mission-box">
+                <img src="images/mission-pic-3.jpg" alt="Mission 3" class="mission-pic">
+                <p>
+                    Choosing the right electric vehicle can be a daunting task, but we're here to make it easier.
+                    Our mission is to provide a comprehensive EV Comparison Tool that allows you to compare different models based on specifications,
+                    budget, and charging time. You can make informed decisions and find the EV that best suits your needs.
+                    Our goal is to empower you with the knowledge to choose the perfect vehicle for your lifestyle.
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact Us Form Section -->
+        <div class="contact-us-section">
+            <div class="contact-us-info">
+                <h1>Contact Us</h1>
+                <p>
+                    Please feel free to reach out to us with any questions, comments, or feedback. We are here to help and look forward to hearing from you!
+                </p>
+                <table>
+                    <tr>
+                        <td><img src="images/address.png" alt="Address"></td>
+                        <td>1234 EVBuddy Lane, City, Country</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/phone.png" alt="Phone"></td>
+                        <td>+1 234 567 8900</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/mail.png" alt="Mail"></td>
+                        <td>support@evbuddy.com</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Contact us container -->
+            <div class="contact-us-form">
+                <form id="contactForm">
+                    <table>
+                        <tr>
+                            <td><label for="firstName">First Name:</label></td>
+                            <td><input type="text" id="firstName" name="firstName" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lastName">Last Name:</label></td>
+                            <td><input type="text" id="lastName" name="lastName" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="mobile">Mobile (Optional):</label></td>
+                            <td><input type="tel" id="mobile" name="mobile"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" id="email" name="email" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="message">Message:</label></td>
+                            <td><textarea id="message" name="message" rows="4" cols="50" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:center;">
+                                <button type="submit">Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!-- Popup message -->
+        <div id="popupMessage" class="popup-message">
+            <p>Your message has been sent successfully!</p>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            // Show success message
+            document.getElementById('popupMessage').style.display = 'block';
+            // Hide popup after 3 seconds
+            setTimeout(function() {
+                document.getElementById('popupMessage').style.display = 'none';
+            }, 3000);
+            // Clear form fields
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>

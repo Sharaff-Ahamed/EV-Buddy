@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS/Home_style.css">
+
+    <body>
+        <div style="width: 100%;">
+
+            <nav>
+                <img src="images/Sample-Logo.png" alt="Sample Logo" class="logo">
+
+                <ul>
+                    <li style=" font-weight: bold;"><a href="Home.html">HOME</a></li>
+                    <li><a href="Compare.html">COMPARE</a></li>
+                    <li><a href="Map.html">MAP</a></li>
+                    <li><a href="Forum.html">FORUM</a></li>
+                    <li><a href="About-us.html">ABOUT US</a></li>
+                </ul> 
+                <ul class="signup">
+                    <li><a href="Signup.html">SIGNUP</a></li>
+                </ul>
+
+            </nav>
+
+            <div class="slideshow"><!-- Slide show section -->
+            <div class="mySlides fade">
+                <img src="images/ev-1.jpg" alt="EV Image 1" style="width:100%">
+                <div class="slide-text">
+                    <p>Discover the future of electric vehicles with advanced technology and eco-friendly design.</p>
+                    <a href="All-EV.html" class="learn-more-link">Explore More</a>
+                </div>
+            </div>
+                  <!-- All videos and pics -->
+            <div class="mySlides fade">
+                <video autoplay muted loop style="width:100%;">
+                    <source src="images/ev-charger-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-text">
+                    <p>Find nearby charging stations with our interactive map. 
+                        Get real-time updates on station availability and view the types of charging 
+                        ports available to ensure a seamless charging experience.</p>
+                    <a href="Map.html" class="learn-more-link">Explore More</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/ev-2.jpg" alt="EV Image 2" style="width:100%">
+                <div class="slide-text">
+                    <p>Easily compare different electric vehicles based on specifications, budget, and charging time. 
+                        Our comparison tool helps you find the perfect EV that fits your needs.</p>
+                    <a href="Compare.html" class="learn-more-link">Explore More</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/ev-3.jpg" alt="EV Image 3" style="width:100%">
+                <div class="slide-text">
+                    <p>Learn more about EV Buddy, our mission, and our commitment to supporting the EV community.
+                         Discover how we aim to make electric mobility accessible and enjoyable for everyone..</p>
+                    <a href="About-us.html" class="learn-more-link">Explore More</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <video autoplay muted loop style="width:100%;">
+                    <source src="images/sigup-video-2.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="slide-text">
+                    <p>Join our vibrant community of EV enthusiasts. Share experiences, ask questions,
+                         and stay informed about the latest trends and innovations in the EV world.</p>
+                    <a href="Forum.html" class="learn-more-link">Explore More</a>
+                </div>
+            </div>
+                  
+                 <!-- Navigation Arrows -->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+                  
+                <!-- Dots under slideshow -->
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+
+            <!-- JS slideshow Code-->
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex - 1].style.display = "block";
+                  dots[slideIndex - 1].className += " active";
+                }
+                </script>
+
+
+        </div>
+        
+
+    </body> 
+
+
+    
+</html>

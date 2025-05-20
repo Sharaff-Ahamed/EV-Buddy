@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS/forum_style.css">
+</head>
+<body>
+    <div style="width: 100%;">
+
+        <nav>
+            <img src="images/Sample-Logo.png" alt="Sample Logo" class="logo" >
+
+            <ul>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="Compare.html">COMPARE</a></li>
+                <li><a href="Map.html">MAP</a></li>
+                <li style=" font-weight: bold;"><a href="Forum.html">FORUM</a></li>
+                <li><a href="About-us.html">ABOUT US</a></li>
+            </ul> 
+            <ul class="signup">
+                <li><a href="Signup.html">SIGNUP</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="top-bar">
+            <div class="top-bar-search"><!--- I added this div to sperate the search bar and button --->
+                <div class="search-bar">
+                    <form class="search">
+                      <input type="text" name="search" placeholder="Search for EVs">
+                      <div class="search-icon">
+                        <button type="submit"><img src="images/search.png" alt="Search"></button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+            <button type="button" class="create-button">+ Create</button>
+        </div>
+
+        <!-- Modal for Creating a Post -->
+        <div id="createPostModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2>Create a Post</h2>
+                <input type="text" id="postTitle" placeholder="Title" >
+                <textarea id="postDescription" rows="4" placeholder="Write something..."></textarea>
+                <input type="file" id="postImage" accept="image/*">
+                <button onclick="createPost()">Post</button>
+            </div>
+        </div>
+        
+        <hr>
+    <!-- Dummy posts -->
+    <div class="main-container">
+        <div class="left-bar">
+            <div class="news-bar">
+                <h2>Latest News</h2>
+                <img src="images/sample-news.jpg" alt="News Image">
+                <h3>Electric Vehicle Market Trends</h3>
+                <p>The electric vehicle market is rapidly evolving with new technologies and models being introduced.</p>
+            </div>
+
+        </div>
+
+        <div class="center-bar">
+            <div class="post">
+                <div class="post-content">
+                    <h4>Electric Vehicle Future</h4>
+                    <p>This post discusses the future of electric vehicles and their role in reducing carbon emissions.</p>
+                    <img src="images/sample-post-1.jpg" alt="Post Image 1">
+                    <button class="like-button">Like <span class="like-count">750</span></button>
+                    <button class="comment-button">Comment</button>
+                    <div class="comments-section" style="display:none;">
+                        <textarea id="commentInput1" placeholder="Add a comment..."></textarea>
+                        <button class="add-comment" data-post-id="1">Add Comment</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-content">
+                    <h4>Tesla Model 3 vs. BYD Dolphin: Which Budget EV Wins?</h4>
+                    <p>Comparing two of the most popular affordable EVs—Tesla’s tech dominance vs. BYD’s value-for-money specs. Which one suits students and urban commuters better?</p>
+                    <img src="images/sample-post-2.jpg" alt="Post Image 2">
+                    <button class="like-button">Like <span class="like-count">928</span></button>
+                    <button class="comment-button">Comment</button>
+                    <div class="comments-section" style="display:none;">
+                        <textarea id="commentInput2" placeholder="Add a comment..."></textarea>
+                        <button class="add-comment" data-post-id="2">Add Comment</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-content">
+                    <h4>How Far Can You Go? Real-World EV Range Tested</h4>
+                    <p>EPA ratings vs. real-world range—we compare highway and city driving efficiency for the Hyundai Kona Electric, Tesla Model Y, and Nissan Leaf.</p>
+                    <img src="images/sample-post-3.jpg" alt="Post Image 3">
+                    <button class="like-button">Like <span class="like-count">120</span></button>
+                    <button class="comment-button">Comment</button>
+                    <div class="comments-section" style="display:none;">
+                        <textarea id="commentInput3" placeholder="Add a comment..."></textarea>
+                        <button class="add-comment" data-post-id="3">Add Comment</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-content">
+                    <h4>The Hidden Costs of Owning an EV: Breakdown for Students</h4>
+                    <p>Beyond the sticker price—insurance, charging costs, and maintenance compared to gas cars. Is an EV really cheaper for a student budget?</p>
+                    <img src="images/sample-post-4.jpg" alt="Post Image 4">
+                    <button class="like-button">Like <span class="like-count">560</span></button>
+                    <button class="comment-button">Comment</button>
+                    <div class="comments-section" style="display:none;">
+                        <textarea id="commentInput4" placeholder="Add a comment..."></textarea>
+                        <button class="add-comment" data-post-id="4">Add Comment</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-content">
+                    <h4>Are EV Batteries Sustainable? The Truth About Recycling</h4>
+                    <p>Exploring lithium-ion battery lifespan, recycling programs, and whether EVs are as eco-friendly as claimed.</p>
+                    <img src="images/sample-post-5.jpg" alt="Post Image 5">
+                    <button class="like-button">Like <span class="like-count">337</span></button>
+                    <button class="comment-button">Comment</button>
+                    <div class="comments-section" style="display:none;">
+                        <textarea id="commentInput5" placeholder="Add a comment..."></textarea>
+                        <button class="add-comment" data-post-id="5">Add Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-bar">
+            <div class="popular-bar" id="mostLikedPostSection" style="padding: 0;">
+                <div class="most-liked-post">
+                    <h3>Most Liked Post</h3>
+                    <div id="mostLikedPostContent">
+                        <!-- Most liked post content will be inserted here dynamically -->
+                    </div>
+                </div>
+                <div class="most-commented-post">
+                    <h3>Most Commented Post</h3>
+                    <div id="mostCommentedPostContent">
+                        <!-- Most commented post content will be inserted here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+    </div>
+
+
+    <script src="JS/forum.js"></script>
+
+</body> 
+
+</html>
