@@ -1,0 +1,239 @@
+
+*{
+margin: 0;
+padding: 0;
+font-family: helvetica neue;
+}
+
+nav {
+height: 55px;
+width: 100%;
+background-color:#0A2540;
+font-size: 15px;
+justify-content: space-between;
+display: flex;
+}
+
+.logo{
+height: 30px;
+width: auto;
+margin: 12px;
+}
+
+nav ul{
+display: flex;
+list-style: none;
+color: white;
+margin: 20px;
+margin-right: 140px;
+}
+
+nav ul li{
+margin-left: 70px;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+nav ul li:hover{
+transform: scale(1.1);
+font-weight: bold;
+}
+
+nav ul li a{
+color: white;
+text-decoration: none;
+}
+
+.signup{
+display: flex;
+list-style: none;
+color: white;
+margin: 20px;
+margin-right: 20px;
+}
+
+.signup li{
+margin-left: 20px;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+.signup li:hover{
+transform: scale(1.1);
+font-weight: bold;
+}
+
+.signup li img{
+height: 40px;
+width: auto;
+margin: -12px 0px;
+}
+
+.signup li a{
+color: white;
+text-decoration: none;
+}
+
+/*search bar*/
+.search-bar{
+position: absolute; 
+left: 50%;
+top: 7%;
+transform: translateX(-50%);
+display: flex;
+align-items: center;
+}
+
+.search{
+background-color:#CCE6FF;
+height: 40px;
+width: 600px;
+border-radius: 50px;
+margin: 10px 5px;
+display: flex;
+justify-content: space-between;
+}
+
+.search input{
+border:none;
+background: transparent;
+outline: none;
+width: 490px;
+padding: 20px 12px;
+}
+
+.search input::placeholder{
+color:grey;
+font-size: 15px;
+}
+
+.search-icon{
+height: 40px;
+width: 40px;
+background-color:#0080FF;
+border-radius: 50px;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+.search button img{
+height: 20px;
+width: auto;
+background: transparent;
+border: none;
+outline: none;
+color: white;
+
+}
+
+.search button{
+background: transparent;
+height: 40px;
+width: 40px;
+border-radius: 50px;
+border: none;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+.search button:hover{
+transform: scale(1.1);
+}
+
+.microphone{
+height: 40px;
+width: 40px;
+background-color:#0080FF;
+border-radius: 50px;
+transition: transform 0.3s ease;
+cursor: pointer;
+margin: 0 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.microphone:hover{
+transform: scale(1.1);
+}
+
+.microphone img{
+height: 20px;
+width: auto;
+}
+
+.create-button{
+border: none;
+appearance: none;
+background: #0080FF;
+margin: 10px 30px;
+color: white;
+height: 40px;
+width: 150px;
+border-radius: 50px;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+.create-button:hover{
+ background-color: #005bb5;
+}
+
+/*compare section*/
+.compare-box {
+height: 450px;
+width: 350px;
+background-color: #F0F8FF;
+margin: 10px;
+border-radius: 20px;
+display: inline-block;
+vertical-align: top;
+padding: 20px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+animation: fadeIn 0.5s ease;
+}
+
+/* Responsive and cleaner compare section */
+.compare-section {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+margin-top: 30px;
+}
+/* Comparison table improvements */
+.compare-content table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+}
+
+.compare-content table td {
+padding: 10px;
+border-bottom: 1px solid #ddd;
+font-size: 16px;
+}
+
+.compare-content table tr:nth-child(odd) {
+background-color: #f9f9f9;
+}
+
+.compare-content table tr:nth-child(even) {
+background-color: #CCE6FF;
+}
+
+/* Center and style Car 1/Car 2 titles */
+.compare-box h4 {
+text-align: center;
+font-size: 24px;
+margin-bottom: 15px;
+font-weight: bold;
+}
+
+/* Fade in animation for compare boxes */
+@keyframes fadeIn {
+from { opacity: 0; transform: scale(0.95); }
+to { opacity: 1; transform: scale(1); }
+}

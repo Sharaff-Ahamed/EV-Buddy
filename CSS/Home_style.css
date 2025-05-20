@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: helvetica neue;
+}
+
+nav {
+    height: 55px;
+    width: 100%;
+    background-color:#0A2540;
+    font-size: 15px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.logo{
+    height: 30px;
+    width: auto;
+    margin: 12px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    color: white;
+    margin: 20px;
+    margin-right: 140px;
+}
+
+nav ul li{
+    margin-left: 70px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.signup{
+    display: flex;
+    list-style: none;
+    color: white;
+    margin: 20px;
+    margin-right: 20px;
+}
+
+.signup li{
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.signup li:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.signup li img{
+    height: 40px;
+    width: auto;
+    margin: -12px 0px;
+}
+
+.signup li a{
+    color: white;
+    text-decoration: none;
+}
+
+.search-bar{
+    background-color:#CCE6FF;
+    height: 40px;
+    width: 600px;
+    margin-top: 10px;
+    border-radius: 50px;
+    display: flex;
+    margin-bottom: 10px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.microphone{
+    height: 40px;
+    width: 40px;
+    background-color:#0080FF;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.microphone:hover{
+    transform: scale(1.1);
+}
+
+.microphone img{
+    height: 20px;
+    width: auto;
+    margin-left:13px;
+    margin-top: 10px;
+}
+
+.search{
+    align-items: center;
+    display: flex;
+}
+
+.search input{
+    border:none;
+    background: transparent;
+    outline: none;
+    width: 490px;
+    padding: 20px 12px;
+}
+
+.search input::placeholder{
+    color:grey;
+    font-size: 15px;
+}
+
+.search button img{
+    height: 20px;
+    width: auto;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+
+}
+
+.search button{
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    border: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.search button:hover{
+    transform: scale(1.1);
+}
+  
+.slideshow{
+    max-width: 1920px;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Container for the image/video */
+.mySlides {
+    position: relative;
+}
+
+/* The text container inside each slide */
+.slide-text {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background behind the text */
+    padding: 15px;
+    border-radius: 10px;
+    width: 700px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Animation to fade in the text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Learn More button */
+.learn-more-link {
+    display: inline-block;
+    margin-top: 10px;
+    background-color:#0080FF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.learn-more-link:hover {
+    background-color: #0056b3;
+}
+  
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.prev{
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+  
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+
+  

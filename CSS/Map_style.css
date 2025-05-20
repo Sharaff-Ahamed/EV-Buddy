@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: helvetica neue;
+}
+
+nav {
+    height: 55px;
+    width: 100%;
+    background-color:#0A2540;
+    font-size: 15px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.logo{
+    height: 30px;
+    width: auto;
+    margin: 12px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    color: white;
+    margin: 20px;
+    margin-right: 140px;
+}
+
+nav ul li{
+    margin-left: 70px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.signup{
+    display: flex;
+    list-style: none;
+    color: white;
+    margin: 20px;
+    margin-right: 20px;
+}
+
+.signup li{
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.signup li:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.signup li img{
+    height: 40px;
+    width: auto;
+    margin: -12px 0px;
+}
+
+.signup li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Map styles */
+.map-view{
+    height: 750px;
+    width: 100%;
+    background-color: #E6E6E6;
+}

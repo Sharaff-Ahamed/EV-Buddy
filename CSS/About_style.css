@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: helvetica neue;
+}
+/* Nav Bar Styling */
+nav {
+    height: 55px;
+    width: 100%;
+    background-color:#0A2540;
+    font-size: 15px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.logo{
+    height: 30px;
+    width: auto;
+    margin: 12px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    color: white;
+    margin: 20px;
+    margin-right: 140px;
+}
+
+nav ul li{
+    margin-left: 70px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.signup{
+    display: flex;
+    list-style: none;
+    color: white;
+    margin: 20px;
+    margin-right: 20px;
+}
+
+.signup li{
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.signup li:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.signup li img{
+    height: 40px;
+    width: auto;
+    margin: -12px 0px;
+}
+
+.signup li a{
+    color: white;
+    text-decoration: none;
+}
+
+#logoutButton {
+    height: 40px;
+    background-color: #0080FF;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#logoutButton:hover {
+    transform: scale(1.01);
+}
+
+/* About us Styling */
+.top-layer {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* space between about us and about pic */
+}
+
+.about-us {
+    height: auto;
+    width: 600px;
+    background-color: white;
+    border-radius: 30px;
+    justify-content: center;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h1 {
+    font-size: 30px;
+    color: #0A2540;
+    margin-bottom: 20px;
+}
+.about-us p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.about-pic {
+    height: 380px;
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-pic img{
+    height: 380px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    color: #0A2540;
+    text-align: center;
+    margin-top: 40px;
+}
+
+ .buttom-layer {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* add gap between mission boxes */
+    margin-top: 25px;
+}
+
+.mission-box {
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.mission-box:hover {
+    transform: scale(1.05);
+}
+
+.mission-box img {
+    height: 180px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.mission-box p {
+    font-size: 16px;
+    color: #0A2540;
+    margin-bottom: 10px;
+}
+.mission-box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/*popup message styles*/
+.popup-message {
+    display: none;
+    position: fixed;
+    top: 20px; /* Position it at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 300px;
+    padding: 15px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/*Contact Us Styling*/
+.contact-us-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f4f4f4;
+}
+
+.contact-us-section h1{
+    font-size: 30px;
+    color: #0A2540;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-us-section p{
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.contact-us-info {
+    width: 45%;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contact-us-info table tr td img {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.contact-us-info table {
+    width: 100%;
+    margin: 0 auto;
+}
+.contact-us-info td {
+    padding: 10px;
+}
+
+.contact-us-form {
+    width: 45%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+.contact-us-form table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.contact-us-form td {
+    padding: 10px;
+}
+
+.contact-us-form input, .contact-us-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-us-form button {
+    background-color: #0A2540;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    float: left;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us-form button:hover {
+    background-color: #004080;
+}
